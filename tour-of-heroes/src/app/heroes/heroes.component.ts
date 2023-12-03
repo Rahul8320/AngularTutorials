@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Hero } from '../hero';
 import { HeroDetailsComponent } from '../hero-details/hero-details.component';
-import { MessagesComponent } from '../messages/messages.component';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeroDetailsComponent, MessagesComponent],
+  imports: [CommonModule, FormsModule, HeroDetailsComponent],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css',
 })
