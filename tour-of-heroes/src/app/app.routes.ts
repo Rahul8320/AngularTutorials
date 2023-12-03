@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailsComponent } from './hero-details/hero-details.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full',
+  },
   {
     path: 'heroes',
     component: HeroesComponent,
@@ -12,8 +18,7 @@ export const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: '',
-    redirectTo: '/dashboard',
-    pathMatch: 'full',
+    path: 'detail/:id',
+    component: HeroDetailsComponent,
   },
 ];
