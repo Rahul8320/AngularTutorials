@@ -1,1 +1,9 @@
-<p>home works!</p>
+<section>
+    <div>
+        @for(item of productList; track item.id){
+        <app-product-item [product]="item"></app-product-item>
+        }@empty {
+        <p>No Product Found</p>
+        }
+    </div>
+</section>

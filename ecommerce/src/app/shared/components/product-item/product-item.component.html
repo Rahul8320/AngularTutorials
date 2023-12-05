@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+    @if(product){
+    <mat-card-header>
+        <mat-card-title>{{product.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="product.thumbnail" [alt]="product.title">
+    <mat-card-content>
+        <p>
+            {{product.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>Add To Cart</button>
+        <button mat-button>View Details</button>
+    </mat-card-actions>
+    }
+    @else{
+    <p>No Product Found</p>
+    }
+</mat-card>
