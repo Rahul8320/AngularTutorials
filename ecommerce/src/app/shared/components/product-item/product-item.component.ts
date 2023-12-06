@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import { SlicePipe } from '@angular/common';
 import { Product } from '../../../core/models/product';
 
 @Component({
   selector: 'app-product-item',
   standalone: true,
-  imports: [MatButtonModule, MatCardModule],
+  imports: [MatButtonModule, SlicePipe],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css',
 })

@@ -1,3 +1,19 @@
-.example-card {
-    max-width: 400px;
+.productItem {
+    width: 95%;
+    height: 350px;
+    margin-top: 10px;
+}
+
+.productImage {
+    height: 200px;
+    overflow: hidden;
+}
+
+.productBody {
+    height: 150px;
+}
+
+.productTitle {
+    font-size: 1.15rem;
+    font-weight: 500;
 }

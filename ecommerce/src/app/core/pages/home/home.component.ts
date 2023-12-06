@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
   }
 
   fetchAllProducts(): void {
-    this.productService
-      .getAllProducts()
-      .subscribe((products) => (this.productList = products));
+    this.productService.getAllProducts().subscribe((res: any) => {
+      this.productList = res.products;
+    });
   }
 }

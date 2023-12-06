@@ -1,20 +1,20 @@
-<mat-card class="example-card">
-    @if(product){
-    <mat-card-header>
-        <mat-card-title>{{product.title}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="product.thumbnail" [alt]="product.title">
-    <mat-card-content>
-        <p>
-            {{product.description}}
+@if(product){
+<div class="card productItem">
+    <div class="productImage">
+        <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title">
+    </div>
+    <div class="card-body productBody">
+        <h5 class="card-title productTitle text-truncate ">{{ product.title }}</h5>
+        <p class="card-text">
+            {{ product.description | slice : 0 : 50 }}
+            @if (product.description.length > 50) {
+            <span>...</span>
+            }
         </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>Add To Cart</button>
-        <button mat-button>View Details</button>
-    </mat-card-actions>
-    }
-    @else{
-    <p>No Product Found</p>
-    }
-</mat-card>
+        <button mat-button color="primary">Add To Cart</button>
+        <button mat-button color="accent">View Details</button>
+    </div>
+</div>
+} @else {
+<p>No Product Found!</p>
+}
